@@ -1,5 +1,6 @@
 # anime_search_database
-Anime Find
+
+Title: Go Find Anime 
 
 ![img](https://res.cloudinary.com/practicaldev/image/fetch/s--8J4Ymz1k--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kjn8iemuegxtuyh7ap75.png)
 
@@ -18,7 +19,7 @@ Have posters for each title and information. If this is already implemented then
 Add Title, genre, year, date, number of seasons, ratings, etc ...
 
 
-Imoprt youtube links for video clips. 
+Import Youtube links for video clips. 
 
 
 
