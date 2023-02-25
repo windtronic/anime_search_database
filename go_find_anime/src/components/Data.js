@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react"
 
+var app = express();
+
 
 
 export default function Data () {
@@ -22,7 +24,7 @@ export default function Data () {
 
 	
 useEffect(() => {
-	const url = 'https//api.jikan.moe/v4/anime/'
+	const url = 'https://api.jikan.moe/v4/anime/'
     
     
     const getAnimeList = async() => {
