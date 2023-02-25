@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 import React from "react"
 
@@ -6,7 +7,9 @@ import React from "react"
 
 
 
-export default function Data (props) {
+
+export default function AnimeData (props) {
+ 
 
 
     //making a state to set data in
@@ -16,13 +19,9 @@ export default function Data (props) {
     // set our data in state and log it
     // render our data
 
- 	const [animeList, SetAnimeList] = useState({})	
+ 	const [animeList, setAnimeList] = useState([])	
 	const [search, setSearch] = useState([])
 
-
-	
-
-	
 useEffect(() => {
 	const url = 'https://api.jikan.moe/v4/anime'
     
@@ -30,16 +29,34 @@ useEffect(() => {
     const getAnimeList = async() => {
 		const response = await axios.get(url)
 		console.log(response.data)
-        SetAnimeList(response.data)
+        setAnimeList(response.data)
 		
 }
 	getAnimeList()
 
 }, [])	
 
+useEffect(() => {
+   const getSearch = async() => {
+    const response = await axios.get(getSearch)
+    console.log(response.data)
+    setSearch(response.data)
+
+}
+
+    // getSearch()
+}, [])
+
     return (
         <div>
-            <h2> Data goes here </h2>
+        <div className='anime-grid' id='anime-list'>
+            
+        <button onClick={() => setAnimeList({...animeList})} />
+            
+            <img></img>
+        </div>
+            <h2></h2>
         </div>
     )
+    
 }
