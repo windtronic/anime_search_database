@@ -9,7 +9,10 @@ import React from "react"
 
 
 export default function AnimeData (props) {
- 
+ let navigate = useNavigate()
+ const showAnime = (index) => {
+    navigate(`${index}`)
+ }
 
 
     //making a state to set data in
@@ -20,7 +23,7 @@ export default function AnimeData (props) {
     // render our data
 
  	const [animeList, setAnimeList] = useState([])	
-	const [search, setSearch] = useState([])
+	// const [search, setSearch] = useState([])
 
 useEffect(() => {
 	const url = 'https://api.jikan.moe/v4/anime'
@@ -36,26 +39,24 @@ useEffect(() => {
 
 }, [])	
 
-useEffect(() => {
-   const getSearch = async() => {
-    const response = await axios.get(getSearch)
-    console.log(response.data)
-    setSearch(response.data)
+// useEffect(() => {
+//    const getSearch = async() => {
+//     const response = await axios.get(getSearch)
+//     console.log(response.data)
+//     setSearch(response.data)
 
-}
+// }
 
     // getSearch()
-}, [])
+// }, [])
 
     return (
         <div>
-        <div className='anime-grid' id='anime-list'>
+        <div className='anime-grid' id='anime'>
+          
             
-        <button onClick={() => setAnimeList({...animeList})} />
-            
-            <img></img>
-        </div>
-            <h2></h2>
+            </div>
+       
         </div>
     )
     
