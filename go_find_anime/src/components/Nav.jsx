@@ -7,8 +7,7 @@ export default function Nav () {
         <div className='Link'>
             
             <Link to='/'>Home</Link>
-            {/* <Link to='/Header'>Header</Link>
-            <Link to='/Main'>Main</Link> */}
+            <Link to='/Data'>Data</Link>
             
         </div>
     )
