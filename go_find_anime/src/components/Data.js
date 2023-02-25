@@ -2,11 +2,11 @@ import { useState, useEffect } from "react"
 import axios from 'axios'
 import React from "react"
 
-var app = express();
 
 
 
-export default function Data () {
+
+export default function Data (props) {
 
 
     //making a state to set data in
@@ -17,14 +17,14 @@ export default function Data () {
     // render our data
 
  	const [animeList, SetAnimeList] = useState({})	
-	// const [search, setSearch] = useState([])
+	const [search, setSearch] = useState([])
 
 
 	
 
 	
 useEffect(() => {
-	const url = 'https://api.jikan.moe/v4/anime/'
+	const url = 'https://api.jikan.moe/v4/anime'
     
     
     const getAnimeList = async() => {
