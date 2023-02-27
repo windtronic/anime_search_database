@@ -19,3 +19,9 @@ h1 {
 .route-box {
   background-color: orange;
 }
+
+.search-box {
+  padding: 10px;
+  font-size: 20px;
+  background-color: blue;
+}
