@@ -4,29 +4,31 @@
  import AnimeData from './AnimeData'
  import AnimeCard from './AnimeCard'
  
- 
 
-export default function Main () {
 
-  const [value, setValue] = useState('')
-  const handleClick = (event) => {
-    event.preventDefault()
-    const lowerCase = event.target.value.toLowerCase()
-    setValue(lowerCase)
-    console.log(value)
+export default function Main (props) {
 
-  }
+
+
+  
     return (
       <div>
       <div className='search-box'>
-          <input type='text' value={handleClick} 
-            placeholder='anime search.....' />
+          <input type='text' value={props.search}
+            placeholder='anime search.....' 
+            onChange={event => props.SetSearch(event.target.value)} />
+            
+
             <button>submit</button>
+
       </div>
       
 
 
 
+      
+      
+      
       <div className='route-container'>
       <Routes>
         <Route path='/' element={<Home/>}/>

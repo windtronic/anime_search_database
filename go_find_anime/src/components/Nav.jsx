@@ -7,8 +7,7 @@ export default function Nav () {
         <div className='Link'>
             
             <Link to='/'>Home</Link>
-            <Link to='/AnimeData'>AnimeData</Link>
-            
+          
         </div>
     )
 }
