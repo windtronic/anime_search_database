@@ -24,9 +24,7 @@ export default function Main (props) {
       </div>
       
       <div className='anime-list'>
-        {/* animeList.map((anime) => (
-          <AnimeCard anime={anime} key={anime.mal_id} />
-        )) */}
+      
       </div>
 
 

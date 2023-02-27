@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 
 
+
 export default function AnimeData (props) {
     const [animes, setAnimes] = useState([])	
     const [search, SetSearch] = useState('')
@@ -31,7 +32,9 @@ const showAnime = (anime) => {
 
 if (animes && animes[0]) {
     return (
+        
         <div>
+         <div className="anime-grid">
             {
         animes.map((anime) => (
         <div className="anime-container" onClick={() => showAnime(anime)} key={anime.title} >
@@ -44,7 +47,7 @@ if (animes && animes[0]) {
             </div>
         ))
 }
-
+    </div>  
     </div>
             
     )
