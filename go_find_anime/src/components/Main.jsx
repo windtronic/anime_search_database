@@ -13,13 +13,15 @@ export default function Main (props) {
             <input type='text'
             placeholder='anime search.....' />
         </div>
+      <div className='route-box'>
+      
 
         <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/AnimeData' element={<AnimeData/>} />
-        <Route path='/AnimeCard' element={<AnimeCard/>} />
+        <Route path='/animedata' element={<AnimeData/>} />
+        <Route path='/animecard' element={<AnimeCard/>} />
         </Routes>
-
+      </div>
         </div>
     )
 }
