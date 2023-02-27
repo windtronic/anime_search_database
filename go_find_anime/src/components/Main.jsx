@@ -14,7 +14,7 @@ export default function Main (props) {
     return (
       <div>
       <div className='search-box'>
-          <input type='text' value={props.search}
+          <input type='text'
             placeholder='anime search.....' 
             onChange={event => props.SetSearch(event.target.value)} />
             
@@ -23,7 +23,11 @@ export default function Main (props) {
 
       </div>
       
-
+      <div className='anime-list'>
+        {/* animeList.map((anime) => (
+          <AnimeCard anime={anime} key={anime.mal_id} />
+        )) */}
+      </div>
 
 
       

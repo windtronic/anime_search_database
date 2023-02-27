@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 
 
 
-export default function AnimeData () {
+export default function AnimeData (props) {
     const [animes, setAnimes] = useState([])	
     const [search, SetSearch] = useState('')
 
@@ -33,9 +33,13 @@ if (animes && animes[0]) {
     return (
         <div>
             {
-        animes.map((anime, index) => (
-        <div className="anime-container" onClick={() => showAnime(anime)} key={anime.index} >
+        animes.map((anime) => (
+        <div className="anime-container" onClick={() => showAnime(anime)} key={anime.title} >
         <img src={anime.images.jpg.image_url} alt={anime.titles} />
+            
+            
+            
+            
             <h3 style={{ fontFamily: 'Verdana', fontSize: '24px', color: 'aliceblue', textDecoration: 'underline', textDecorationColor: 'lime'}}>{anime.title}</h3>
             </div>
         ))
