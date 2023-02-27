@@ -38,6 +38,8 @@ if (animes && animes[0]) {
             {
         animes.map((anime) => (
         <div className="anime-container" onClick={() => showAnime(anime)} key={anime.data} >
+
+            
              <img style={{ display: 'block' }} src={anime.images.jpg.image_url} alt={anime.titles} />
             <h3 style={{ fontFamily: 'Verdana', fontSize: '24px', color: 'aliceblue', textDecoration: 'underline', textDecorationColor: 'lime'}}>{anime.title}</h3>
             </div>
