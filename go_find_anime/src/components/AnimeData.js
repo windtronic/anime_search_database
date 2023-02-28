@@ -40,12 +40,10 @@ if (animes && animes[0]) {
             {
         animes.map((anime) => (
         <div className="anime-container" onClick={() => showAnime(anime)} key={anime.objectID} >
-         <a href={anime.images.jpg.image_url}> {anime.title} {}</a>
-        <img src={anime.images.jpg.image_url} alt='animes'></img>
+         <a href={anime.url}> {anime.title}</a>
         <div className='anime-link' onClick={() => showAnime(anime)} key={anime.links} >
-       
- 
-    </div>
+      </div>
+        <img src={anime.images.jpg.image_url} alt='animes'></img>
         </div>
         ))
         
