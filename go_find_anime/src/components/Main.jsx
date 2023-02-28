@@ -8,8 +8,8 @@ export default function Main () {
   
   const [search, setSearch] = useState('')
   
-  const onChange = (event) => {
-    setSearch(event.target.value)
+  const handleChange = (event) => {
+    setSearch()
 
  
 
@@ -25,7 +25,7 @@ return (
          placeholder='anime search.....' 
          value={search} 
          onChange={(event) => {
-          setSearch()
+          setSearch(event.target.value)
          }} />
         
       <button type='button' onClick={() => setSearch(search)}>Search</button>

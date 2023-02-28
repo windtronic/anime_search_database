@@ -3,9 +3,9 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
 
-export default function AnimeData (props) {
+export default function AnimeData () {
     const [animes, setAnimes] = useState([])	
-  
+    
    
 
 useEffect(() => {
@@ -22,6 +22,7 @@ useEffect(() => {
   
 		
 }
+
 	getAnimes()
    
 }, [])	
