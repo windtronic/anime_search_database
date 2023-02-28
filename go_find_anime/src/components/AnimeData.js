@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import { Link, useNavigate } from "react-router-dom"
-
-
+import { useNavigate } from "react-router-dom"
+import AnimeCard from "./AnimeCard"
 
 
 export default function AnimeData (props) {
     const [animes, setAnimes] = useState([])	
-    const [search, SetSearch] = useState('')
+   
+
+  
 
 useEffect(() => {
 	const url = 'https://api.jikan.moe/v4/anime'
@@ -23,9 +24,11 @@ useEffect(() => {
 }, [])	
 console.log(animes)
 
+
+
 let navigate = useNavigate()
 const showAnime = (anime) => {
-  navigate(`${anime.data}`)
+  navigate(`${anime}`)
 }
 
 
@@ -39,11 +42,8 @@ if (animes && animes[0]) {
         animes.map((anime) => (
         <div className="anime-container" onClick={() => showAnime(anime)} key={anime.title} >
         <img src={anime.images.jpg.image_url} alt={anime.titles} />
-            
-            
-            
-            
-            <h3 style={{ fontFamily: 'Verdana', fontSize: '24px', color: 'aliceblue', textDecoration: 'underline', textDecorationColor: 'lime'}}>{anime.title}</h3>
+           
+        <h3 style={{ fontFamily: 'Verdana', fontSize: '24px', color: 'aliceblue', textDecoration: 'underline', textDecorationColor: 'lime'}}>{anime.title}</h3>
             </div>
         ))
 }

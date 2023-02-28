@@ -8,30 +8,24 @@
 
 export default function Main (props) {
 
+  const [search, setSearch] = useState('')
 
+  const handleChange = (event) => {
+    setSearch(event.target.value)
+  }
 
-  
-    return (
+  return (
       <div>
       <div className='search-box'>
-          <input type='text'
-            placeholder='anime search.....' 
-            onChange={event => props.SetSearch(event.target.value)} />
-            
-
-            <button>submit</button>
+          <input type='text' value={search}
+           onChange={handleChange}
+          placeholder='anime search.....' />
+           
+           <button>submit</button>
 
       </div>
-      
-      <div className='anime-list'>
-      
-      </div>
 
-
-      
-      
-      
-      <div className='route-container'>
+     <div className='route-container'>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/animedata' element={<AnimeData/>} />
