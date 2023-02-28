@@ -8,7 +8,7 @@ export default function AnimeCard ({anime}) {
             <NavLink   key={`${anime.mal_id}-link`}
         to={`/anime/${anime.mal_id}` && `/anime/${anime.mal_id}`} >
          <figure>
-          <img src={anime?.images?.jpg?.large_image_url} alt="" />
+          <img src={anime.images.jpg.large_image_url} alt="" />
         </figure>
         <h3>{anime.title}</h3>
       </NavLink>

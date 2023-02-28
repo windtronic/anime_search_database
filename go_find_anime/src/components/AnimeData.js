@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
-import AnimeCard from "./AnimeCard"
+import { Link } from 'react-router-dom'
 
 
-export default function AnimeData (props) {
+export default function AnimeData () {
     const [animes, setAnimes] = useState([])	
    
 
@@ -15,6 +15,9 @@ useEffect(() => {
     const getAnimes = async() => {
 		const response = await axios.get(url)
         console.log(response.data)
+        console.log(response.data.links)
+        console.log(response.data.meta)
+        console.log(response.data.pagination)
 		
     setAnimes(response.data.data)
 		
@@ -31,8 +34,6 @@ const showAnime = (anime) => {
   navigate(`${anime}`)
 }
 
-
-
 if (animes && animes[0]) {
     return (
         
@@ -41,7 +42,11 @@ if (animes && animes[0]) {
             {
         animes.map((anime) => (
         <div className="anime-container" onClick={() => showAnime(anime)} key={anime.title} >
-        <img src={anime.images.jpg.image_url} alt={anime.titles} />
+            <Link href={anime.url} >
+        <a>
+            <img src={anime.images.jpg.image_url} />
+        </a>
+        </Link>
            
         <h3 style={{ fontFamily: 'Verdana', fontSize: '24px', color: 'aliceblue', textDecoration: 'underline', textDecorationColor: 'lime'}}>{anime.title}</h3>
             </div>
@@ -49,6 +54,7 @@ if (animes && animes[0]) {
 }
     </div>  
     </div>
+    
             
     )
 } else {
