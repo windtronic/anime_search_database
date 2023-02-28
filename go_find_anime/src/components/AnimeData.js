@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function AnimeData (props) {
     const [animes, setAnimes] = useState([])	
-    
+  
    
 
 useEffect(() => {
@@ -18,6 +18,8 @@ useEffect(() => {
         // console.log(response.data.pagination)
 		
     setAnimes(response.data.data)
+
+  
 		
 }
 	getAnimes()
@@ -39,11 +41,11 @@ if (animes && animes[0]) {
          <div className="anime-grid">
             {
         animes.map((anime) => (
-        <div className="anime-container" onClick={() => showAnime(anime)} key={anime.objectID} >
-         <a href={anime.url}> {anime.title}</a>
-        <div className='anime-link' onClick={() => showAnime(anime)} key={anime.links} >
-      </div>
-        <img src={anime.images.jpg.image_url} alt='animes'></img>
+          <div className="anime-container" onClick={() => showAnime(anime)} key={anime.objectID} >
+            <a href={anime.url}> {anime.title}</a>
+          <div className='anime-link' onClick={() => showAnime(anime)} key={anime.links} >
+          </div>
+            <img src={anime.images.jpg.image_url} alt='animes'></img>
         </div>
         ))
         

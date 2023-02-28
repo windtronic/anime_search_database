@@ -7,13 +7,11 @@
 export default function Main () {
   
   const [search, setSearch] = useState('')
+  
   const onChange = (event) => {
     setSearch(event.target.value)
 
-  const onSearch = (searchTerm) => {
-    setSearch(searchTerm)
-    console.log('search', searchTerm)
-  }
+ 
 
 
   }
@@ -21,16 +19,21 @@ return (
   
       <div>
       <div className='search-box'>
-        <form className='search'>
-         <input type='text'   placeholder='anime search.....' 
-           value={search}
-           onChange={(event) => setSearch(event.target.value)} />
-          <button type='button' onClick={() => setSearch(search)}>submit</button>
-      </form>
+        <div className='search'>
+         <input 
+         type='text'  
+         placeholder='anime search.....' 
+         value={search} 
+         onChange={(event) => {
+          setSearch()
+         }} />
+        
+      <button type='button' onClick={() => setSearch(search)}>Search</button>
+      
       </div>
       <div className="anime-list">
 			
-				
+				</div>
 			</div>
 
 
@@ -47,3 +50,4 @@ return (
 </div>
     )
 }
+//route path the images to anime cards 
