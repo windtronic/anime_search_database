@@ -7,8 +7,8 @@ export default function Nav () {
         <div className='nav-bar'>
             
             <Link to='/'>Home</Link>
-            <Link to='/AnimeData'>Anime List</Link>
-          
+            {/* <Link to='/AnimeData'>Anime List</Link> */}
+            
         </div>
     )
 }

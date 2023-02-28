@@ -4,18 +4,26 @@
  import AnimeData from './AnimeData'
  import AnimeCards from './AnimeCards'
  
-
-
-export default function Main (props) {
+export default function Main () {
+  
   const [search, setSearch] = useState('')
- 
+  const onChange = (event) => {
+    setSearch(event.target.value)
+
+  const onSearch = (searchTerm) => {
+    setSearch(searchTerm)
+    console.log('search', searchTerm)
+  }
+
+
+  }
 return (
   
       <div>
       <div className='search-box'>
         <form className='search'>
          <input type='text'   placeholder='anime search.....' 
-           value={props.search}
+           value={search}
            onChange={(event) => setSearch(event.target.value)} />
           <button type='button' onClick={() => setSearch(search)}>submit</button>
       </form>

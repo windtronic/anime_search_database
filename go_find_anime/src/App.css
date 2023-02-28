@@ -46,6 +46,7 @@ div {
 
 .App {
   text-align: center;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_KitSSpFSIggXsyy-BNGRv6VWLbPruuHecA&usqp=CAU");
   
   
 }
@@ -53,20 +54,12 @@ div {
   background-size: cover;
 }
 
-header ul {
+/* header ul {
   display: flex;
   list-style: none;
-}
+} */
 
-header a {
-  color: #eee;
-  font-size: 1.3rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  margin: auto 1em;
-}
-
-header a:hover {
+header :hover {
   color: aquamarine;
 }
 
@@ -74,6 +67,7 @@ header a:hover {
   padding: 10px;
   font-size: 20px;
   background-color: blue;
+  margin-bottom: 1em;
 }
 
 button {
