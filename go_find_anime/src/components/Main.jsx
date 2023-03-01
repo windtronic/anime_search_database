@@ -49,11 +49,7 @@ return (
 				</div>
 			</div>
 
-
-     
-     
-     
-     <div className='route-container'>
+    <div className='route-container'>
       <Routes>
         <Route path='/' element={<AnimeData animes={animes}/>} />
         <Route path='/animecards' element={<AnimeCards animes={animes} />} />

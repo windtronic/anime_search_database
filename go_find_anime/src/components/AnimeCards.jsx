@@ -2,7 +2,7 @@ import { Link, useNavigate} from 'react-router-dom'
 
 
 
-export default function AnimeCards (props) {
+export default function AnimeCards ({animes}) {
   
 	let navigate = useNavigate()
 	const showAnimeCards = (anime) => {
@@ -12,17 +12,17 @@ export default function AnimeCards (props) {
   return (
         <div>
         <Link to='/'>Home</Link>
-        <div className='grid'>
-            {props.animes.map((anime) =>
-            <div key={anime} className='card'
-            onClick={() => showAnimeCards(anime)} >
-            <h2>{anime.title}</h2>
-			  <img src={anime.images.jpg.image_url} alt='animes'></img>
-            </div>
-            )}
+		{animes.map((anime) => (
+      <div>
+        <img src={anime.images.jpg.image_url} alt="animes"></img>
+        <h5></h5>
+        < a href={anime.title}> {anime.title}</a>
+      </div>
+    ))}
+			
         </div>
         
-    </div>
+    
     )
     
 }
