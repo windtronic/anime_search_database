@@ -93,6 +93,9 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  color: rgb(47, 39, 5);
+  font-size: 15px;
+  font-display:inherit;
 }
 
 
