@@ -17,7 +17,7 @@ export default function AnimeCards (props) {
             <div key={anime} className='card'
             onClick={() => showAnimeCards(anime)} >
             <h2>{anime.title}</h2>
-			<img src={anime.images.jpg.image_url} alt='animes'></img>
+			  <img src={anime.images.jpg.image_url} alt='animes'></img>
             </div>
             )}
         </div>
