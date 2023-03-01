@@ -17,16 +17,16 @@ export default function AnimeData({ animes }) {
       <div
         className="anime-container"
         onClick={(e) => showAnime(anime)}
-        key={anime.title}
-      >
-        
+        key={anime.title} >
+        < a href={anime.url}> <img src={anime.images.jpg.image_url} alt="anime-image"></img></a>
+        {anime.title} 
       </div>
     ))}
     {animes.map((anime) => (
       <div>
-        <img src={anime.images.jpg.image_url} alt="animes"></img>
-        <h5></h5>
-        < a href={anime.title}> {anime.title}</a>
+        
+        
+        
       </div>
     ))}
   </div>

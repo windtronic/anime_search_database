@@ -13,9 +13,9 @@ export default function Main () {
     const getAnimes = async() => {
 		const response = await axios.get(url)
         console.log(response.data)
-        console.log(response.data.links)
-        console.log(response.data.meta)
-        console.log(response.data.pagination)
+        // console.log(response.data.links)
+        // console.log(response.data.meta)
+        // console.log(response.data.pagination)
 		
     setAnimes(response.data.data)
 
@@ -58,4 +58,3 @@ return (
 </div>
     )
 }
-//route path the images to anime cards 
