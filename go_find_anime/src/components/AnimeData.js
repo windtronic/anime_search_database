@@ -19,10 +19,11 @@ useEffect(() => {
 		
     setAnimes(response.data.data)
 
-  const handleChange = (e) => {
-    e.preventDefault()
-    oneAnime(search)
+ 
   }
+   const handleChange = (e) => {
+    setSearch({...search,[e.target.id]: e.target.value})
+    
 
  const oneAnime = async() => {
   const get = await axios.get(`https://api.jikan.moe/v4/anime/?name=`)
