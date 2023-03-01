@@ -1,0 +1,8 @@
+export const CHARACTER_URL = 'https://api.jikan.moe/v4/characters'
+export const TOP_ANIME = 'https://api.jikan.moe/v4/top/anime'
+export const GENRES_URL = 'https://api.jikan.moe/v4/genres/anime'
+export const SCHEDULE_URL = 'https://api.jikan.moe/v4/schedules'
+export const REVIEWS_URL = 'https://api.jikan.moe/v4/reviews/anime'
+export const REC_URL = 'https://api.jikan.moe/v4/recommendations/anime'
+export const SEASON_URL = 'https://api.jikan.moe/v4/seasons'
+export const UPCOMING_URL = 'https://api.jikan.moe/v4/seasons/upcoming'

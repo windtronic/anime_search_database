@@ -1,8 +1,10 @@
- import { Route, Routes} from 'react-router-dom'
+ import { Route, Routes, useNavigate } from 'react-router-dom'
  import { useState, useEffect } from "react"
  import AnimeData from './AnimeData'
  import AnimeCards from './AnimeCards'
  import axios from 'axios'
+ import { CHARACTER_URL } from '../globals'
+
  
 export default function Main () {
   const [animes, setAnimes] = useState({})	
@@ -26,19 +28,32 @@ getAnimes()
    
 }, [])	
  
+	let navigate = useNavigate()
+	const showSearch = (animes) => {
+	  navigate(`${animes}`)
+	}	
+
+  const handleSearch = () => {
+    setSearch(search)
+  }
 
  const handleClick = (e) => {
-    setSearch({...search,[e.target.value]: e.target.value})
+    setSearch(e.target.value)
    }
   
-return (
+//  const filterSearch = search.filter((animes) =>
+//  search.name.toLowerCase()
+//  )
+ 
+
+ return (
   
       <div>
       <div className='search-box'>
-        <div className='search'>
-         <input 
+        <input 
          type='text'  
          placeholder='anime search.....' 
+         value={search}
          onChange={(e) => setSearch(e.target.value)} />
         
       <button type='button' onClick={handleClick}>Search</button>
@@ -46,9 +61,14 @@ return (
       </div>
       <div className="anime-list">
 			
-				</div>
+			
 			</div>
 
+   
+   
+   
+   
+   
     <div className='route-container'>
       <Routes>
         <Route path='/' element={<AnimeData animes={animes}/>} />

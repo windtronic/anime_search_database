@@ -11,7 +11,7 @@ export default function AnimeCards ({animes}) {
  
   return (
         <div>
-        <Link to='/'>Home</Link>
+        {/* <Link to='/'>Home</Link> */}
         
 		{animes.map((anime) => (
       <div className='cards'>
