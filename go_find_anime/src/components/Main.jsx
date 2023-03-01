@@ -4,17 +4,9 @@
  import AnimeData from './AnimeData'
  import AnimeCards from './AnimeCards'
  
-export default function Main () {
+export default function Main (search, setSearch, handleChange) {
   
-  const [search, setSearch] = useState('')
   
-  const handleChange = (event) => {
-    setSearch()
-
- 
-
-
-  }
 return (
   
       <div>
@@ -23,10 +15,7 @@ return (
          <input 
          type='text'  
          placeholder='anime search.....' 
-         value={search} 
-         onChange={(event) => {
-          setSearch(event.target.value)
-         }} />
+         onChange={handleChange} />
         
       <button type='button' onClick={() => setSearch(search)}>Search</button>
       

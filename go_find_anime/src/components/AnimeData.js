@@ -3,29 +3,37 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
 
-export default function AnimeData () {
+export default function AnimeData (props) {
     const [animes, setAnimes] = useState([])	
-    
+    const [search, setSearch] = useState('')
    
 
 useEffect(() => {
 	const url = `https://api.jikan.moe/v4/anime`
     const getAnimes = async() => {
 		const response = await axios.get(url)
-        console.log(response.data)
+        // console.log(response.data)
         // console.log(response.data.links)
         // console.log(response.data.meta)
         // console.log(response.data.pagination)
 		
     setAnimes(response.data.data)
 
-  
+  const handleChange = (e) => {
+    e.preventDefault()
+    oneAnime(search)
+  }
+
+ const oneAnime = async() => {
+  const get = await axios.get(`https://api.jikan.moe/v4/anime/?name=`)
+  oneAnime(get.data.name)
+ } 
 		
 }
 
 	getAnimes()
    
-}, [])	
+}, [search, setSearch])	
 console.log(animes)
 
 let navigate = useNavigate()
@@ -49,15 +57,11 @@ if (animes && animes[0]) {
             <img src={anime.images.jpg.image_url} alt='animes'></img>
         </div>
         ))
-        
-
-           
 }
     </div>  
     </div>
     
-            
-    )
+  )
 } else {
     return (
         <h1> loading please wait </h1>
