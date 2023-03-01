@@ -1,21 +1,28 @@
 import { Link, useNavigate} from 'react-router-dom'
-import React from 'react'
 
 
-export default function AnimeCards ({animes}) {
+
+export default function AnimeCards (props) {
   
 	let navigate = useNavigate()
-	const showAnime = (animes) => {
-	  navigate(`${animes}`)
+	const showAnimeCards = (anime) => {
+	  navigate(`${anime}`)
 	}	
  
-	return (
-		 <div className='anime-link' onClick={() => showAnime(animes)} key={animes.links} >
-          
-            <img src={animes.images.jpg.image_url} alt='animes'></img>
+  return (
+        <div>
+        <Link to='/'>Home</Link>
+        <div className='grid'>
+            {props.animes.map((anime) =>
+            <div key={anime} className='card'
+            onClick={() => showAnimeCards(anime)} >
+            <h2>{anime.title}</h2>
+			<img src={anime.images.jpg.image_url} alt='animes'></img>
+            </div>
+            )}
         </div>
-		
-		
-	)
+        
+    </div>
+    )
     
 }

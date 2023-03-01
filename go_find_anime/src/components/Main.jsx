@@ -12,7 +12,7 @@ export default function Main () {
 	const url = `https://api.jikan.moe/v4/anime`
     const getAnimes = async() => {
 		const response = await axios.get(url)
-        console.log(response.data.data)
+        console.log(response.data)
         console.log(response.data.links)
         console.log(response.data.meta)
         console.log(response.data.pagination)
@@ -27,18 +27,7 @@ getAnimes()
 }, [])	
  
 
- const oneAnime = async() => {
-  const get = await axios.get`https://api.jikan.moe/v4/genres/anime`
-  oneAnime(get.data.data)
-  console.log(get.data.data)
-  
-   
- } 
-
-
-
-
-   const handleClick = (e) => {
+ const handleClick = (e) => {
     setSearch({...search,[e.target.value]: e.target.value})
    }
   
@@ -67,8 +56,7 @@ return (
      <div className='route-container'>
       <Routes>
         <Route path='/' element={<AnimeData animes={animes}/>} />
-       
-        <Route path='/animecards' element={<AnimeCards />} />
+        <Route path='/animecards' element={<AnimeCards animes={animes} />} />
       </Routes>
       </div>
 </div>
