@@ -1,48 +1,46 @@
-import { useState, useEffect } from "react"
-import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 import { Link } from 'react-router-dom'
 
-export default function AnimeData (props) {
-    const [animes, setAnimes] = useState([])	
-    const [search, setSearch] = useState('')
+export default function AnimeData ({animes}) {
+    // const [animes, setAnimes] = useState([])	
+    // const [search, setSearch] = useState('')
    
 
-useEffect(() => {
-	const url = `https://api.jikan.moe/v4/anime`
-    const getAnimes = async() => {
-		const response = await axios.get(url)
-        // console.log(response.data)
-        // console.log(response.data.links)
-        // console.log(response.data.meta)
-        // console.log(response.data.pagination)
+// useEffect(() => {
+// 	const url = `https://api.jikan.moe/v4/anime`
+//     const getAnimes = async() => {
+// 		const response = await axios.get(url)
+//         // console.log(response.data)
+//         // console.log(response.data.links)
+//         // console.log(response.data.meta)
+//         // console.log(response.data.pagination)
 		
-    setAnimes(response.data.data)
+//     setAnimes(response.data.data)
 
  
-  }
-   const handleChange = (e) => {
-    setSearch({...search,[e.target.id]: e.target.value})
+//   }
+//    const handleChange = (e) => {
+//     setSearch({...search,[e.target.id]: e.target.value})
     
 
- const oneAnime = async() => {
-  const get = await axios.get(`https://api.jikan.moe/v4/anime/?name=`)
-  oneAnime(get.data.name)
- } 
+//  const oneAnime = async() => {
+//   const get = await axios.get(`https://api.jikan.moe/v4/anime/?name=`)
+//   oneAnime(get.data.name)
+//  } 
 		
-}
+// }
 
-	getAnimes()
+// 	getAnimes()
    
-}, [search, setSearch])	
-console.log(animes)
+// }, [search, setSearch])	
+// console.log(animes)
 
 let navigate = useNavigate()
 const showAnime = (anime) => {
   navigate(`${anime}`)
 }
 
-
+console.log(animes)
 
 if (animes && animes[0]) {
     return (

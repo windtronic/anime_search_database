@@ -1,4 +1,4 @@
-import AnimeData from './AnimeData'
+
 
 export default function Home () {
     return (
@@ -8,8 +8,7 @@ export default function Home () {
          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_KitSSpFSIggXsyy-BNGRv6VWLbPruuHecA&usqp=CAU"
             alt='logo' /> */}
             </div>
-            
-         <AnimeData/> 
+         
         </div>
     )
 }
