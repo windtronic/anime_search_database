@@ -7,7 +7,7 @@ export default function AnimeData({ animes }) {
     navigate(`${anime}`);
   };
 
-  // console.log(animes)
+  console.log(animes)
 
   if (animes && animes[0]) {
     return (
@@ -19,16 +19,10 @@ export default function AnimeData({ animes }) {
         onClick={(e) => showAnime(anime)}
         key={anime.title} >
         < a href={anime.url}> <img src={anime.images.jpg.image_url} alt="anime-image"></img></a>
-        {anime.title} 
+        {anime.title}
       </div>
     ))}
-    {/* {animes.map((anime) => (
-      <div>
-        
-        
-        
-      </div>
-    ))} */}
+   
   </div>
 </div>
 
