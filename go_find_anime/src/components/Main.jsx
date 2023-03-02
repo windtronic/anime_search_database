@@ -1,15 +1,15 @@
- import { Route, Routes, useNavigate } from 'react-router-dom'
+ import { Route, Routes, useNavigate, useSearchParams } from 'react-router-dom'
  import { useState, useEffect } from "react"
  import AnimeData from './AnimeData'
  import AnimeCards from './AnimeCards'
  import axios from 'axios'
- import { CHARACTER_URL } from '../globals'
+//  import { CHARACTER_URL } from '../globals'
 
- 
+
 export default function Main () {
   const [animes, setAnimes] = useState({})	
     const [search, setSearch] = useState('')
-
+ 
     useEffect(() => {
 	const url = `https://api.jikan.moe/v4/anime`
     const getAnimes = async() => {
@@ -20,43 +20,36 @@ export default function Main () {
         // console.log(response.data.pagination)
 		
     setAnimes(response.data.data)
-
- 
-  }
+}
 
 getAnimes()
    
 }, [])	
+
  
-	let navigate = useNavigate()
-	const showSearch = (animes) => {
-	  navigate(`${animes}`)
-	}	
+  // const [useSearchParams] = useSearchParams()
+  // const page = `https://api.jikan.moe/v4/anime?q=`
+ 
+    
+   
 
-  const handleSearch = () => {
-    setSearch(search)
-  }
+    
 
- const handleClick = (e) => {
-    setSearch(e.target.value)
-   }
-  
-//  const filterSearch = search.filter((animes) =>
-//  search.name.toLowerCase()
-//  )
+
+
  
 
  return (
   
       <div>
       <div className='search-box'>
-        <input 
-         type='text'  
+      <input 
+         type='text'  className='col-md-12 input'
          placeholder='anime search.....' 
          value={search}
-         onChange={(e) => setSearch(e.target.value)} />
+         onChange={e => setSearch(e.target.value)} />
         
-      <button type='button' onClick={handleClick}>Search</button>
+      {/* <button type='button' onClick={handleClick}>Search</button> */}
       
       </div>
       <div className="anime-list">

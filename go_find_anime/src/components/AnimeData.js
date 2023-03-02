@@ -22,13 +22,13 @@ export default function AnimeData({ animes }) {
         {anime.title} 
       </div>
     ))}
-    {animes.map((anime) => (
+    {/* {animes.map((anime) => (
       <div>
         
         
         
       </div>
-    ))}
+    ))} */}
   </div>
 </div>
 

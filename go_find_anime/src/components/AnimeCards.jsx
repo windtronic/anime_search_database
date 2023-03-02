@@ -14,8 +14,8 @@ export default function AnimeCards ({animes}) {
         {/* <Link to='/'>Home</Link> */}
         
 		{animes.map((anime) => (
-      <div className='cards'>
-         < a href={anime.url}> <img src={anime.images.jpg.image_url} alt="animes"></img></a>
+      <div key={anime.title}> 
+       < a href={anime.url}> <img src={anime.images.jpg.image_url} alt="animes"></img></a>
          {anime.title} 
          
         
