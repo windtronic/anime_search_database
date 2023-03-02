@@ -14,12 +14,12 @@ search bar.
 
 Create a search bar.
 
-Have posters for each title and information. If this is already implemented then have the option to click and render additional pictures. 
+Have posters for each title and information. If this is already implemented then have the option to click and render additional information. 
 
 Add Title, genre, year, date, number of seasons, ratings, etc ...
 
 
-Import Youtube links for video clips. 
+
 
 
 
@@ -35,4 +35,5 @@ MVP BONUS - Make mobile version
           - Create a remove from list function
           - Add video content
           - Add newer anime
+          -Import Youtube links for video clips. 
 

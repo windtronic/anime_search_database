@@ -59,7 +59,7 @@ export default function Main() {
           Search
         </button>
       </div>
-      <div className="anime-list"></div>
+      
 
       <div className="route-container">
         <Routes>

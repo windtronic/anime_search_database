@@ -8,7 +8,11 @@ h1 {
 }
 
 
-
+.route-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 
 .anime-grid {
@@ -24,44 +28,30 @@ h1 {
   height: 200px;
 } 
 
-h3 {
-    font-family: Verdana;
-    font-size: 24px; 
-    color: aliceblue;
-    text-decoration:underline;
-    text-decoration-color: lime;
-}
-
-
 
 .App {
   text-align: center;
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_KitSSpFSIggXsyy-BNGRv6VWLbPruuHecA&usqp=CAU");
-  
-}
-
-.App {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20px;
+  color: rgb(11, 11, 11);
 }
 
 .App-link {
-  color: #61dafb;
+  color: #306b7b;
 }
 div {
   background-size: cover;
 }
 
-/* header ul {
-  display: flex;
-  list-style: none;
-} */
+nav {
+  padding: 10px;
+}
 
 header :hover {
   color: aquamarine;
@@ -70,7 +60,7 @@ header :hover {
 .search-box {
   padding: 10px;
   font-size: 20px;
-  background-color: blue;
+  background-color: rgb(36, 36, 126);
   margin-bottom: 1em;
 }
 
@@ -82,19 +72,17 @@ button {
   cursor: pointer;
   margin-top: .1em;
   color: white;
-  
-}
-h3 {
-  margin: 0;
 }
 
-.Nav{
+
+.nav-bar{
   text-decoration: none;
-  color: white;
   font-weight: bold;
-  margin-left: 0.5em;
+  margin-left: 3rem;
   font-size: 30px;
-  justify-content: space-between;
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between; 
 }
 
 .anime-grid {
@@ -113,12 +101,6 @@ h3 {
 }
 
 
-.cards {
-  display: grid;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 
 
 
@@ -135,5 +117,7 @@ h3 {
   box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
   color: white;
   font-family: 'Georgia';
+  font-size: 10px;
   cursor: pointer;
-} */
+}  */
+
