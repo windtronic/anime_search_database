@@ -19,6 +19,10 @@ export default function AnimeCards({ animes }) {
           </a>
           <img src={anime.images.jpg.image_url} alt="animes"></img>
           <p> {anime.synopsis}</p>
+          <p>Score: {anime.score} of 10</p>
+          <p>{anime.source}</p>
+          <p>{anime.rating}</p>
+          <p>{anime.year}</p>
         </div>
       ))}
     </div>
