@@ -7,18 +7,6 @@ h1 {
   color: rgb(48, 58, 58);
 }
 
-
-.route-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-
-.anime-grid {
-  display: grid;
-}
-
 .search-box {
   padding: 10px;
   font-size: 20px;
@@ -78,7 +66,7 @@ button {
 .nav-bar{
   text-decoration: none;
   font-weight: bold;
-  margin-left: 3rem;
+  margin-left: 1rem;
   font-size: 30px;
   display: flex;
   flex-wrap:wrap;
@@ -96,7 +84,7 @@ button {
   flex-wrap: wrap;
   justify-content: space-around;
   color: rgb(47, 39, 5);
-  font-size: 15px;
+  font-size: 20px;
   font-display:inherit;
 }
 
