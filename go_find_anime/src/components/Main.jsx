@@ -8,12 +8,15 @@
 
 export default function Main () {
   const [animes, setAnimes] = useState({})	
-    const [search, setSearch] = useState('')
+  const [search, setSearch] = useState({searchBar:'', formInput:'', isSubmitted:false})
  
-    useEffect(() => {
-	const url = `https://api.jikan.moe/v4/anime`
+   useEffect(() => {
+	  const url = `https://api.jikan.moe/v4/anime?q=${search.searchBar}`
+
+    console.log(url)
     const getAnimes = async() => {
-		const response = await axios.get(url)
+		  const response = await axios.get(url)
+        console.log(response.data)
         console.log(response.data)
         // console.log(response.data.links)
         // console.log(response.data.meta)
@@ -24,11 +27,30 @@ export default function Main () {
 
 getAnimes()
    
-}, [])	
+}, [search.isSubmitted])	
 
- 
+
+// let navigate = useNavigate()
+// const showAnime = (mal_id) => {
+//   navigate(`${mal_id}`) 
+// }
+
+const handleChange = (e) => {
+  e.preventDefault()
+  console.log(search)
+  setSearch({...search,[e.target.id]: e.target.value, formInput:e.target.value, isSubmitted:false})
+}
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  setSearch({...search, formInput:'', isSubmitted: true})
+  console.log(search)
+}
+
+
+  //  const page = `https://api.jikan.moe/v4/anime?q=`
   // const [useSearchParams] = useSearchParams()
-  // const page = `https://api.jikan.moe/v4/anime?q=`
+ 
  
     
    
@@ -44,12 +66,12 @@ getAnimes()
       <div>
       <div className='search-box'>
       <input 
-         type='text'  className='col-md-12 input'
+         type='text'  id='searchBar'
          placeholder='anime search.....' 
-         value={search}
-         onChange={e => setSearch(e.target.value)} />
+         value={search.formInput}
+         onChange={handleChange} />
         
-      {/* <button type='button' onClick={handleClick}>Search</button> */}
+      <button type='button' onClick={handleSubmit}>Search</button>
       
       </div>
       <div className="anime-list">
