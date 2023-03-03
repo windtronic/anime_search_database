@@ -1,4 +1,4 @@
-import { Route, Routes, useNavigate, useSearchParams } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import AnimeData from "./AnimeData";
 import AnimeCards from "./AnimeCards";

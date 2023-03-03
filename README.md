@@ -4,7 +4,11 @@ Title: Go Find Anime
 
 ![img](https://res.cloudinary.com/practicaldev/image/fetch/s--8J4Ymz1k--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kjn8iemuegxtuyh7ap75.png)
 
-API link = "https://docs.api.jikan.moe/"
+API link = "`https://api.jikan.moe/v4/anime?q="
+
+netlify deployment link = "https://640158bbda519c684e9cb68e--soft-muffin-6dac88.netlify.app/"
+
+
 
 MVP - To create a successful search engine with 
 anime lists provided.
