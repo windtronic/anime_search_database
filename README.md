@@ -13,16 +13,15 @@ netlify deployment link = "https://640158bbda519c684e9cb68e--soft-muffin-6dac88.
 MVP - To create a successful search engine with 
 anime lists provided.
 
-Create a opps sorry we havent added that yet for animes not included but searched for in the 
-search bar.
-
-Create a search bar.
-
-Have posters for each title and information. If this is already implemented then have the option to click and render additional information. 
-
-Add Title, genre, year, date, number of seasons, ratings, etc ...
 
 
+-  Create a search bar with a filter of sorts. 
+
+-  Have posters for each title and information. If this is already implemented then have the option to click and render additional information. 
+
+-  Add Title, year, date, number of seasons, ratings, etc ...
+
+-  If the user wants the full information create a hyperlink to my anime list. 
 
 
 
@@ -35,9 +34,13 @@ Add Title, genre, year, date, number of seasons, ratings, etc ...
 
 
 MVP BONUS - Make mobile version
-          - Create an add to list function
-          - Create a remove from list function
-          - Add video content
-          - Add newer anime
-          -Import Youtube links for video clips. 
+    
+-   Create a opps sorry we havent added that 
+yet for animes not included but searched for in the 
+search bar.
+-   Create an add to list function
+-   Create a remove from list function
+-   Add video content
+-   Add newer anime
+-   Import Youtube links for video clips. 
 
