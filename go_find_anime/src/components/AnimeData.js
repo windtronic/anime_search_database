@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-// import { Link } from 'react-router-dom'
+
 
 export default function AnimeData({ animes }) {
   let navigate = useNavigate();
@@ -18,7 +18,7 @@ export default function AnimeData({ animes }) {
         className="anime-container"
         onClick={(e) => showAnime(anime)}
         key={anime.title} >
-        < a href={anime.url}> <img src={anime.images.jpg.large_image_url} alt=""></img></a>
+        < a href={anime.url} target='_blank'> <img src={anime.images.jpg.large_image_url} alt=""></img></a>
         {anime.title}
       </div>
     ))}
@@ -32,12 +32,4 @@ export default function AnimeData({ animes }) {
   }
 }
 
-//making a state to set data in
-// setting up a useEffect to control my components lifecycle
-//organize API links /url
-//Make the API call
-// set our data in state and log it
-// render our data
-// Set up Guard Operator
 
-// Returns for INSIDE of our IF ELSE

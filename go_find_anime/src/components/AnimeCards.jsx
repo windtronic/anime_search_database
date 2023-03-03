@@ -6,7 +6,7 @@ export default function AnimeCards({ animes }) {
      <div className="anime-card">
       {animes.map((anime) => (
         <div key={anime.title}>
-          <a href={anime.url}>
+          <a href={anime.url} target='_blank'>
             {anime.title} 
             
           </a>
