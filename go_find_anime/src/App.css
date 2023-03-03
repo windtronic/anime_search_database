@@ -7,11 +7,7 @@ h1 {
   color: rgb(48, 58, 58);
 }
 
-.search-box {
-  padding: 10px;
-  font-size: 20px;
-  background-color: blue;
-}
+
 .button {
   height: 200px;
 } 
@@ -66,11 +62,11 @@ button {
 .nav-bar{
   text-decoration: none;
   font-weight: bold;
-  margin-left: 1rem;
+  margin-left:.5em;
   font-size: 30px;
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-between; 
+  justify-content: space-around; 
 }
 
 .anime-grid {
@@ -94,18 +90,5 @@ button {
 
 
 
-/* .anime-card {
-  padding: 1em;
-  width: 18em;
-  height: 15em;
-  background-color: rgb(36, 47, 85);
-  border-radius: 0.5em;
-  margin: 1em;
-  justify-content: space-around;
-  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.527);
-  color: white;
-  font-family: 'Georgia';
-  font-size: 10px;
-  cursor: pointer;
-}  */
+
 

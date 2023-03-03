@@ -18,7 +18,7 @@ export default function AnimeData({ animes }) {
         className="anime-container"
         onClick={(e) => showAnime(anime)}
         key={anime.title} >
-        < a href={anime.url}> <img src={anime.images.jpg.image_url} alt="anime-image"></img></a>
+        < a href={anime.url}> <img src={anime.images.jpg.large_image_url} alt=""></img></a>
         {anime.title}
       </div>
     ))}
