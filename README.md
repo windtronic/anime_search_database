@@ -6,7 +6,7 @@ Title: Go Find Anime
 
 API link = "`https://api.jikan.moe/v4/anime?q="
 
-netlify deployment link = "https://640158bbda519c684e9cb68e--soft-muffin-6dac88.netlify.app/"
+netlify deployment link = "https://windtronic-2023.netlify.app/"
 
 
 
