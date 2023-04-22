@@ -2,7 +2,7 @@
 
 Title: Go Find Anime 
 
-![img](https://res.cloudinary.com/practicaldev/image/fetch/s--8J4Ymz1k--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kjn8iemuegxtuyh7ap75.png)
+![img](https://i.imgur.com/e6qp00T.png)
 
 API link = "`https://api.jikan.moe/v4/anime?q="
 
